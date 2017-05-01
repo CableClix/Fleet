@@ -3,6 +3,7 @@ import ObjectiveC
 
 private var handlerAssociatedKey: UInt = 0
 
+#if os(iOS)
 @objc private class ObjectifiedBlock: NSObject {
     var block: ((UITableViewRowAction, IndexPath) -> Void)?
 
@@ -45,3 +46,4 @@ extension UITableViewRowAction {
         return fleet_init(withStyle: style, title: title, handler: handler)
     }
 }
+#endif

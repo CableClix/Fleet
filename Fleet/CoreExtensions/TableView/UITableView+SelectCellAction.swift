@@ -1,5 +1,6 @@
 import UIKit
 
+#if os(iOS)
 extension UITableView {
     /**
      Mimic a user taking an edit action on the cell at the given index path in
@@ -64,3 +65,4 @@ extension UITableView {
         delegate.tableView?(self, didEndEditingRowAt: indexPath)
     }
 }
+#endif

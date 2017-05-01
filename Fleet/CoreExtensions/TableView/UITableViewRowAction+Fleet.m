@@ -3,6 +3,7 @@
 
 BOOL didSwizzleUITableViewRowAction = NO;
 
+#if TARGET_OS_IOS
 @implementation UITableViewRowAction (FleetPrivate)
 
 + (void)initialize {
@@ -19,3 +20,4 @@ BOOL didSwizzleUITableViewRowAction = NO;
 }
 
 @end
+#endif
